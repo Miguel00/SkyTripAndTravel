@@ -2,21 +2,34 @@
 {% block  title %}Tours{% endblock %}
 {% load static %}
 {% block slides %}
-<div class="slider-item" style="background-image: url('{% static 'core/images/bg_2.jpg' %}');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12 ftco-animate">
-          <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Tour</span></p> -->
-          <h1 class="mb-3">Tours</h1>
+  {% for tour_banner in banners %}
+    <div class="slider-item" style="background-image: url('{{tour_banner.imagen.url}}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center">
+          <div class="col-md-7 col-sm-12 ftco-animate">
+            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Tour</span></p> -->
+            <h1 class="mb-3">{{tour_banner.descripción}}</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {% endfor %}
 {% endblock %}
 {% block  content %}
 
   <!-- END slider -->
+  <!-- {% for tour in tours %}
+    {{tour.nombre_tour}}
+    {{tour.pickup}}
+    {{tour.duracion}}
+    {{tour.costo}}
+    {{tour.descripción}}
+    {{tour.comentario}}
+    {{tour.imagen}}
+    {{tour.creacion}}
+    {{tour.actualizacion}}
+  {% endfor %} -->
 
   <section class="ftco-section">
     <div class="container">

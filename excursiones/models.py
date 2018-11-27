@@ -19,3 +19,17 @@ class excursiones(models.Model):
 
     def __str__(self):
         return self.nombre_excursion
+
+class excursion_banners(models.Model):
+    descripción = models.TextField()
+    imagen = models.ImageField(verbose_name="Imagen", upload_to="excursiones/banners")
+    creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
+    actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualizacion")
+    
+    class Meta:
+        verbose_name = 'excursion_banners'
+        verbose_name_plural = 'excursion_banners'
+        ordering = ['-creacion'] 
+
+    def __str__(self):
+        return self.descripción

@@ -18,6 +18,7 @@ from django.urls import path
 from core import views as home_views
 from hoteles import views as hoteles_views
 from excursiones import views as excursiones_views
+from tours import views as tours_views
 
 from django.conf import settings
 urlpatterns = [
@@ -28,7 +29,7 @@ urlpatterns = [
     path('hoteles/', hoteles_views.hoteles, name="hoteles"),
     # path('servicios/', home_views.servicios, name="servicios"),
     path('excursiones/', excursiones_views.Excursiones, name="excursiones"),
-    path('tours/', home_views.tours, name="tours"),
+    path('tours/', tours_views.tours, name="tours"),
     path('', home_views.home, name="home"),
     path('admin/', admin.site.urls),
 ]

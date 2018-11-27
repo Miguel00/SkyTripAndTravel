@@ -2,17 +2,19 @@
 {% block  title %}Destinos{% endblock %}
 {% load static %}
 {% block slides %}
-<div class="slider-item" style="background-image: url('{% static 'core/images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12 ftco-animate">
-          <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Hotels</span></p> -->
-          <h1 class="mb-3">Destinos</h1>
+  {% for hotel_banner in banners  %}
+    <div class="slider-item" style="background-image: url('{{hotel_banner.imagen.url}}');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text align-items-center">
+            <div class="col-md-7 col-sm-12 ftco-animate">
+              <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Hotels</span></p> -->
+              <h1 class="mb-3">{{hotel_banner.descripción}}</h1>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-</div>
+  {% endfor %}
 {% endblock %}
 {% block  content %}
 
