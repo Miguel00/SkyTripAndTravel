@@ -16,6 +16,14 @@
   background: rgba(0, 0, 0, 0.4)!important;
 }
 .color1{color:white}
+.bt-copmprar{    
+  background-color: #82bc00;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 16px;
+
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7836,7 +7844,7 @@ h1, h2, h3, h4, h5,
         display: inline-block;
         margin-right: 10px;
         margin-bottom: 10px;
-        opacity: .6; }
+        /* opacity: .6; } */}
     .block-5 .text .price {
       color: #fff; }
     .block-5 .text .star-rate {
