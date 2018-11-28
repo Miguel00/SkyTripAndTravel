@@ -10,6 +10,7 @@ class Hotele(models.Model):
     imagen = models.ImageField(verbose_name="Imagen", upload_to="hoteles")
     creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualizacion")
+    recomendado = models.BooleanField()
 
     class Meta:
         verbose_name = 'Hoteles'

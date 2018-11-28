@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponse
-
+from hoteles.models import Hotele
 # Create your views here.
 def home(request):
-    return render(request, "core/home.html")
+    hoteles = Hotele.objects.all()
+    return render(request, "core/home.html", {'hoteles': hoteles})
 
 def about(request):
     return render(request, "core/about.html")
@@ -12,9 +13,6 @@ def contact(request):
 
 def destinos(request):
     return render(request, "core/destinos.html")
-
-# def servicios(request):
-#     return render(request, "core/servicios.html")
 
 def tours(request):
     return render(request, "core/tours.html") 

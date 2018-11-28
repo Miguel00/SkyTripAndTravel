@@ -271,11 +271,11 @@
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center mb-5 pb-5 ftco-animate">
           <div class="col-md-7 text-center heading-section">
-            <h2>Destinos más populares</h2>
+            <h2>Hoteles más populares</h2>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-md-6 col-lg-3 ftco-animate">
+          <!-- <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-1.jpg' %}');">
               <div class="text">
                 <span class="price" style="font-weight:bold;">Precio: $399</span>
@@ -287,7 +287,24 @@
                 <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p>
               </div>
             </a>
-          </div>
+          </div> -->
+          {% for hotel in hoteles %}
+            {% if hotel.recomendado is True %}
+              <div class="col-md-6 col-lg-3 ftco-animate">
+                <a href="#" class="block-5" style="background-image: url('{{hotel.imagen.url}}');">
+                  <div class="text">
+                    <span class="price">{{hotel.costo}}</span>
+                    <h3 class="heading">{{hotel.nombre_hotel}}</h3>
+                    <div class="post-meta">
+                      <span>{{hotel.descripción}}</span>
+                      <span class="bt-copmprar">Comprar</span>
+                    </div>
+                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
+                  </div>
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-2.jpg' %}');">
               <div class="text">
@@ -382,7 +399,6 @@
         </div>
       </div>
     </section>
-
   <!-- <section class="ftco-section testimony-section">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-5">
@@ -467,20 +483,8 @@
           </div>
         </div>
         <div class="col-lg-8 p-2 pl-md-5 heading-section">
-          <h2 class="mb-5 p-2 pb-3 ftco-animate">Hoteles más recomendados</h2>
+          <h2 class="mb-5 p-2 pb-3 ftco-animate">Recomendados</h2>
           <div class="row no-gutters d-flex">
-            <div class="col-md-4 ftco-animate">
-              <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-1.jpg' %}');">
-                <div class="text">
-                  <span class="price">$29/night</span>
-                  <h3 class="heading">Luxe Hotel</h3>
-                  <div class="post-meta">
-                    <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                  </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                </div>
-              </a>
-            </div>
             <div class="col-md-4 ftco-animate">
               <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-2.jpg' %}');">
                 <div class="text">
@@ -489,7 +493,7 @@
                   <div class="post-meta">
                     <span>Ameeru Ahmed Magu Male’, Maldives</span>
                   </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
+                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
                 </div>
               </a>
             </div>
@@ -501,7 +505,19 @@
                   <div class="post-meta">
                     <span>Ameeru Ahmed Magu Male’, Maldives</span>
                   </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
+                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 ftco-animate">
+              <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-2.jpg' %}');">
+                <div class="text">
+                  <span class="price">$29/night</span>
+                  <h3 class="heading">Deluxe Hotel</h3>
+                  <div class="post-meta">
+                    <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                  </div>
+                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
                 </div>
               </a>
             </div>
