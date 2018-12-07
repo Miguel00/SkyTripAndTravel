@@ -19,12 +19,14 @@ from core import views as home_views
 from hoteles import views as hoteles_views
 from excursiones import views as excursiones_views
 from tours import views as tours_views
+from nosotros import views as nosotros_views
+from contacto import views as contacto_views
 
 from django.conf import settings
 urlpatterns = [
-    path('about/', home_views.about, name="about"),
+    path('about/', nosotros_views.about, name="about"),
     path('destinos/', home_views.destinos, name="destinos"),
-    path('contact/', home_views.contact, name="contact"),
+    path('contact/', contacto_views.contacto, name="contact"),
     path('destinos/', home_views.destinos, name="destinos"),
     path('hoteles/', hoteles_views.hoteles, name="hoteles"),
     # path('servicios/', home_views.servicios, name="servicios"),

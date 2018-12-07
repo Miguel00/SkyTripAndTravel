@@ -9,6 +9,7 @@ class excursiones(models.Model):
     capacidad_maxima = models.IntegerField()
     costo = models.DecimalField(decimal_places=3, max_digits=6)
     imagen = models.ImageField(verbose_name="Imagen", upload_to="excursiones")
+    recomendado = models.BooleanField(default=False)
     creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualizacion")
 

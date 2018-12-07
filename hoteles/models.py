@@ -8,9 +8,10 @@ class Hotele(models.Model):
     costo = models.DecimalField(decimal_places=3, max_digits=6)
     descripción = models.TextField()
     imagen = models.ImageField(verbose_name="Imagen", upload_to="hoteles")
+    recomendado = models.BooleanField()
     creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualizacion")
-    recomendado = models.BooleanField()
+
 
     class Meta:
         verbose_name = 'Hoteles'

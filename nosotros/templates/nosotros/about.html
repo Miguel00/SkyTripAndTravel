@@ -2,17 +2,19 @@
 {% block  title %}Acerca{% endblock %}
 {% load static %}
 {% block slides %}
-<div class="slider-item" style="background-image: url({% static 'core/images/bg_3.jpg' %});" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12 ftco-animate">
-          <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p> -->
-          <h1 class="mb-3">Quienes somos</h1>
+  {% for nosotros_banner in nosotros_banners %}
+    <div class="slider-item" style="background-image: url({{nosotros_banner.imagen.url}});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row slider-text align-items-center">
+          <div class="col-md-7 col-sm-12 ftco-animate">
+            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p> -->
+            <h1 class="mb-3">{{nosotros_banner.comentario}}</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {% endfor %}
 {% endblock %}
 {% block  content %}
 <section class="ftco-section-2">
@@ -91,61 +93,30 @@
           </div>
           <div class="row ftco-animate">
             <div class="carousel owl-carousel ftco-owl">
-              <div class="item text-center">
+              {% for comentario in comentarios %}
+                <div class="item text-center">
+                  <div class="testimony-wrap p-4 pb-5">
+                    <!-- <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)" style="border: 1px solid red;"></div> -->
+                    <div class="text">
+                      <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
+                      <p class="mb-5">{{comentario.descripcion}}</p>
+                      <p class="name">{{comentario.nombre}}</p>
+                      <span class="position">{{comentario.lugar}}</span>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+              <!-- <div class="item text-center">
                 <div class="testimony-wrap p-4 pb-5">
-                  <!-- <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)" style="border: 1px solid red;"></div> -->
+                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)" style="border: 1px solid red;"></div>
                   <div class="text">
-                    <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
+                    <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p>
                     <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
                     <p class="name">Claudia Sky</p>
                     <span class="position">Invitada de Cancún</span>
                   </div>
                 </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <!-- <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)" style="border: 1px solid red;"></div> -->
-                  <div class="text">
-                    <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
-                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    <p class="name">Claudia Sky</p>
-                    <span class="position">Invitada de Cancún</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <!-- <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)" style="border: 1px solid red;"></div> -->
-                  <div class="text">
-                    <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
-                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    <p class="name">Claudia Sky</p>
-                    <span class="position">Invitada de Cancún</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <!-- <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)" style="border: 1px solid red;"></div> -->
-                  <div class="text">
-                    <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
-                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    <p class="name">Claudia Sky</p>
-                    <span class="position">Invitada de Cancún</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item text-center">
-                <div class="testimony-wrap p-4 pb-5">
-                  <!-- <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)" style="border: 1px solid red;"></div> -->
-                  <div class="text">
-                    <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p> -->
-                    <p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    <p class="name">Claudia Sky</p>
-                    <span class="position">Invitada de Cancún</span>
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

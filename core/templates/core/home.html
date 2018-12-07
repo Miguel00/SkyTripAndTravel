@@ -3,38 +3,19 @@
 {% load static %}
 
 {% block slides %}
-    <div class="slider-item" style="background-image: url('{% static 'core/images/bluebay2.jpg' %}');">
+  {% for home_banner in home_banners  %}
+  <div class="slider-item" style="background-image: url('{{home_banner.imagen.url}}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row slider-text align-items-center">
           <div class="col-md-7 col-sm-12 ftco-animate">
-            <h1 class="mb-3">Experience the best trip ever</h1>
+            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Hotels</span></p> -->
+            <h1 class="mb-3">{{home_banner.descripción}}</h1>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="slider-item" style="background-image: url('{% static 'core/images/acua2.jpg' %}');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center">
-          <div class="col-md-7 col-sm-12 ftco-animate">
-            <h1 class="mb-3">Making the most out of your holiday</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slider-item" style="background-image: url('{% static 'core/images/bg_3.jpg' %}');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row slider-text align-items-center">
-          <div class="col-md-7 col-sm-12 ftco-animate">
-            <h1 class="mb-3">Travel Operator Just For You</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  {% endfor %}
 {% endblock %}
 
 {% block  content %}
@@ -182,15 +163,20 @@
   <section class="ftco-section" style="padding-bottom: 0px;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 promo ftco-animate">
-          <a href="#" class="promo-img mb-4" style="background-image: url('{% static 'core/images/promo-1.jpg' %}');"></a>
-          <div class="text text-center">
-            <h2>Group Cruises</h2>
-            <h3 class="price"><span>from</span> $299</h3>
-            <a href="#" class="read">Read more</a>
-          </div>
-        </div>
-        <div class="col-lg-3 promo ftco-animate">
+        {% for tour in tours %}
+          {% if tour.recomendado is True %}
+            <div class="col-lg-3 promo ftco-animate">
+              <a href="#" class="promo-img mb-4" style="background-image: url('{{tour.imagen.url}}');"></a>
+              <div class="text text-center">
+                <h2>{{tour.nombre_tour}}</h2>
+                <h3 class="price"><span>Precio: </span>{{tour.costo}}</h3>
+                <a href="#" class="read">Read more</a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <!-- <div class="col-lg-3 promo ftco-animate">
           <a href="#" class="promo-img mb-4" style="background-image: url({% static 'core/images/promo-2.jpg' %});"></a>
           <div class="text text-center">
             <h2>Beach Tours</h2>
@@ -213,7 +199,7 @@
             <h3 class="price"><span>from</span> $599</h3>
             <a href="#" class="read">Read more</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -297,7 +283,7 @@
                     <h3 class="heading">{{hotel.nombre_hotel}}</h3>
                     <div class="post-meta">
                       <span>{{hotel.descripción}}</span>
-                      <span class="bt-copmprar">Comprar</span>
+                      <!-- <span class="bt-copmprar">Comprar</span> -->
                     </div>
                     <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
                   </div>
@@ -305,45 +291,6 @@
               </div>
             {% endif %}
           {% endfor %}
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-2.jpg' %}');">
-              <div class="text">
-                  <span class="price" style="font-weight:bold;">Precio: $399</span>
-                  <h3 class="heading">Titulo del destino</h3>
-                  <div class="post-meta">
-                    <span>Descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span><br>
-                    <span class="bt-copmprar">Comprar</span>
-                  </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-3.jpg' %}');">
-              <div class="text">
-                  <span class="price" style="font-weight:bold;">Precio: $399</span>
-                  <h3 class="heading">Titulo del destino</h3>
-                  <div class="post-meta">
-                    <span>Descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span><br>
-                    <span class="bt-copmprar">Comprar</span>
-                  </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-4.jpg' %}');">
-              <div class="text">
-                  <span class="price" style="font-weight:bold;">Precio: $399</span>
-                  <h3 class="heading">Titulo del destino</h3>
-                  <div class="post-meta">
-                    <span>Descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span><br>
-                    <span class="bt-copmprar">Comprar</span>
-                  </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span></p>
-              </div>
-            </a>
-          </div>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <a href="#" class="block-5" style="background-image: url('{% static 'core/images/tour-5.jpg' %}');">
               <div class="text">
@@ -477,27 +424,31 @@
             <form action="#" class="subscribe-form">
               <div class="form-group">
                 <span class="icon icon-paper-plane"></span>
-                <input type="text" class="form-control" placeholder="Enter your email address">
+                <input type="text" class="form-control" placeholder="Ingrese su dirección de correo electrónico">
               </div>
             </form>
           </div>
         </div>
         <div class="col-lg-8 p-2 pl-md-5 heading-section">
-          <h2 class="mb-5 p-2 pb-3 ftco-animate">Recomendados</h2>
+          <h2 class="mb-5 p-2 pb-3 ftco-animate">Excursiones Recomendadas</h2>
           <div class="row no-gutters d-flex">
-            <div class="col-md-4 ftco-animate">
-              <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-2.jpg' %}');">
-                <div class="text">
-                  <span class="price">$29/night</span>
-                  <h3 class="heading">Deluxe Hotel</h3>
-                  <div class="post-meta">
-                    <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                  </div>
-                  <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
+            {% for excursion in excursiones %}
+              {% if excursion.recomendado is True %}
+                <div class="col-md-4 ftco-animate">
+                  <a href="#" class="block-5" style="background-image: url('{{excursion.imagen.url}}');">
+                    <div class="text">
+                      <span class="price">Precio: {{excursion.costo}}</span>
+                      <h3 class="heading">{{excursion.nombre_excursion}}</h3>
+                      <div class="post-meta">
+                        <span>Destino: {{excursion.destino}}</span>
+                      </div>
+                      <!-- <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p> -->
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div class="col-md-4 ftco-animate">
+              {% endif %}
+            {% endfor %}
+            <!-- <div class="col-md-4 ftco-animate">
               <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-3.jpg' %}');">
                 <div class="text">
                   <span class="price">$29/night</span>
@@ -520,7 +471,7 @@
                   <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span></span></p>
                 </div>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
