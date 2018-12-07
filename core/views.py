@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from hoteles.models import Hotele
+from tours.models import tours
 # Create your views here.
 def home(request):
     hoteles = Hotele.objects.all()
-    return render(request, "core/home.html", {'hoteles': hoteles})
-
+    tours = tours.objects.all()
+    return render(request, "core/home.html", {'hoteles': hoteles, 'tours':tours})
+    
 def about(request):
     return render(request, "core/about.html")
 
