@@ -24,20 +24,7 @@ from contacto import views as contacto_views
 
 from django.conf import settings
 urlpatterns = [
-    path('about/', nosotros_views.about, name="about"),
-    path('terminos/', home_views.destinos, name="terminos"),
-    path('politicas/', home_views.politicas, name="politicas"),
-    path('contact/', contacto_views.contacto, name="contact"),
-    path('destinos/', home_views.destinos, name="destinos"),
-    path('hoteles/', hoteles_views.hoteles, name="hoteles"),
-    path('hoteles/<int:pk>', hoteles_views.hoteles_details, name="hoteles"),
-    # path('servicios/', home_views.servicios, name="servicios"),
-    path('excursiones/', excursiones_views.Excursiones, name="excursiones"),
-    path('excursiones/<int:pk>', excursiones_views.Excursiones_details, name="excursiones"),
-    path('tours/', tours_views.tours, name="tours"),
-    path('tours/<int:pk>', tours_views.tours_details, name="tours"),
     path('', home_views.home, name="home"),
-    path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

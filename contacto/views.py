@@ -17,7 +17,7 @@ def contacto(request):
             #enviar correo y redireccinar
             email = EmailMessage(
                 'Skytrips&travel',
-                'Asunto: {}\nDe {} <{}>\n\nEscribio:\n\n{}'.format(asunto, name, email, content),
+                'Asunto: {}\nNombre: {} \nCorreo: <{}>\n\nEscribio:\n{}'.format(asunto, name, email, content),
                 'no-contestar@inbox.mailtrap.io',
                 ['esstrad4@gmail.com'],
                 reply_to=[email]

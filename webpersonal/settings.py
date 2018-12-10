@@ -131,7 +131,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '05eb57517c0ffe'
-EMAIL_HOST_PASSWORD = '98165c514e545e'
-EMAIL_PORT = '2525'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'esstrad4@gmail.com'
+EMAIL_HOST_PASSWORD = 'diosesverboynosustantivo'
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True

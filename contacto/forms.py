@@ -5,7 +5,7 @@ class ContactForm(forms.Form):
         attrs = {'type':"text", 'class':"form-control", 'placeholder':"Nombre"}
     ))
     email = forms.EmailField(label="Correo", required=True, widget=forms.EmailInput(
-        attrs = {'type':"text", 'class':"form-control", 'placeholder':"Correo"}
+        attrs = {'type':"email", 'class':"form-control", 'placeholder':"Correo"}
     ))
     asunto = forms.CharField(label="Asunto", required=True, widget=forms.TextInput(
         attrs = {'type':"text", 'class':"form-control", 'placeholder':"Asunto"}

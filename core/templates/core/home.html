@@ -408,12 +408,24 @@
         <div class="col-lg-4 bg-light p-3 p-md-5 d-flex align-items-center heading-section ftco-animate">
           <div>
             <h2 class="mb-5 pb-3">¿Quieres obtener nuestras mejores ofertas de viajes y consejos? ¡Suscríbete ahora!</h2>
-            <form action="#" class="subscribe-form">
+            <form action="" method="POST" class="subscribe-form">
+                {% csrf_token %}
+                <div class="form-group">
+                
+                  <!-- <span class="icon icon-paper-plane"></span> -->
+                  {{form.email}}
+                  <input type="submit" value="Enviar" style="padding-right: 14px;" class="btn btn-primary">
+                </div>
+                {% if 'ok' in request.GET %}
+                  <p>Enviado</p>
+                {% endif %}
+            </form>
+            <!-- <form action="#" class="subscribe-form">
               <div class="form-group">
                 <span class="icon icon-paper-plane"></span>
                 <input type="text" class="form-control" placeholder="Correo electrónico">
               </div>
-            </form>
+            </form> -->
           </div>
         </div>
         <div class="col-lg-8 p-2 pl-md-5 heading-section">
