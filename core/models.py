@@ -14,3 +14,4 @@ class home_banner(models.Model):
 
     def __str__(self):
         return self.descripción
+    

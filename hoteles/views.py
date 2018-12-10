@@ -7,5 +7,7 @@ def hoteles(request):
     return render(request, "hoteles/hoteles.html", {'hoteles': hoteles,'banners':banners})
 
 def hoteles_details(request, pk):
-    hotel = Hotele.objects.get(pk=pk)
-    return render(request, "hoteles/hotelesdetails.html", {'hotel': hotel})
+    property = Hotele.objects.get(pk=pk)
+    image_list = property.images.all()
+    return render(request, "hoteles/hotelesdetails.html", {'hotel': property,'slider':image_list})
+    

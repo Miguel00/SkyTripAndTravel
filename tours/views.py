@@ -8,5 +8,6 @@ def tours(request):
     return render(request, "tours/tours.html", {"tours": Tours, "banners":Tours_banners }) 
 
 def tours_details(request, pk):
-    Tours = tour.objects.get(pk=pk)
-    return render(request, "tours/toursdetails.html", {"tour": Tours}) 
+    property = tour.objects.get(pk=pk)
+    image_list = property.images.all()
+    return render(request, "tours/toursdetails.html", {"tour": property,'slider':image_list}) 

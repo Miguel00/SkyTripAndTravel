@@ -8,5 +8,6 @@ def Excursiones(request):
     return render(request, 'excursiones/servicios.html', {'excursiones':excursiones_all, 'banners':excursiones_banners})
 
 def Excursiones_details(request, pk):
-    excursiones_all = excursiones.objects.get(pk=pk)
-    return render(request, 'excursiones/serviciosdetails.html', {'excursion':excursiones_all})
+    property = excursiones.objects.get(pk=pk)
+    image_list = property.images.all()
+    return render(request, 'excursiones/serviciosdetails.html', {'excursion':property,'slider':image_list})

@@ -34,3 +34,11 @@ class hotel_banners(models.Model):
 
     def __str__(self):
         return self.descripción
+
+class imagenes(models.Model):
+    property = models.ForeignKey(Hotele, related_name='images', on_delete=models.PROTECT)
+    image = models.ImageField()
+
+    class Meta:
+        verbose_name = 'imagen'
+        verbose_name_plural = 'Slider detalle'
