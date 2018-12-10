@@ -16,7 +16,7 @@ def contacto(request):
             content = request.POST.get('content', '')
             #enviar correo y redireccinar
             email = EmailMessage(
-                'Skytrips&travel',
+                'SkyTrips&Travel',
                 'Asunto: {}\nNombre: {} \nCorreo: <{}>\n\nEscribio:\n{}'.format(asunto, name, email, content),
                 'no-contestar@inbox.mailtrap.io',
                 ['esstrad4@gmail.com'],
