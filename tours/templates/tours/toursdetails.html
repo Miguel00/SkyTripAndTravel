@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% block  title %}Tours{% endblock %}
+{% load static %}
+
+{% block  content %}
+<section class="ftco-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-6 mb-6 ftco-animate">
+              <div class="col-md-12 col-lg-12 mb-12 ftco-animate" style="padding:0px!important;">
+                <a href="#" class="block-5 img-fluid" style="background-image: url('{{tour.imagen.url}}');">
+                </a>
+              </div>
+              <br>
+              <h5 class="heading">Tour: {{tour.nombre_tour}}</h5>
+              <h5>Pickup: {{tour.pickup}}</h5>
+              <h5>Duracion: {{tour.duracion}}</h5>
+              <p>Comentarios: {{tour.comentario|safe}}</p>
+              <p>Decripción: {{tour.descripción|safe}}</p>
+              <p class="price">Precio: {{tour.costo}}</p>
+              <a href="http://bit.ly/2OmOBYh" target="_blank"><span class="bt-copmprar price" style="color:white!important;font-size:19px;">Cotizar</span></a>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

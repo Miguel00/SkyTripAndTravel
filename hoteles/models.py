@@ -1,12 +1,12 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Hotele(models.Model): 
     destino = models.CharField(max_length=50)
     nombre_hotel = models.CharField(max_length=50)
-    capacidad_habitacion = models.IntegerField()
-    costo = models.DecimalField(decimal_places=3, max_digits=6)
-    descripción = models.TextField()
+    capacidad_habitacion = models.CharField(max_length=50)
+    costo = models.CharField(max_length=50)
+    descripción = RichTextField()
     imagen = models.ImageField(verbose_name="Imagen", upload_to="hoteles")
     recomendado = models.BooleanField()
     creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")

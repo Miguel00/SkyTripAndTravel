@@ -37,7 +37,7 @@
     <nav class="nav-background font-weight navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
         id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="/"><img class="rounded mx-auto d-block" src="{% static 'core/images/logo.png' %}" style="width:22%;" alt=""></a>
+            <a class="navbar-brand" href="/"><img class="rounded mx-auto d-block pocoyo" src="{% static 'core/images/logo.png' %}" style="width:22%;" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -48,7 +48,7 @@
                     <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="{% url 'home' %}" class="nav-link">Inicio</a></li>
                     <li class="nav-item {% if request.path == '/tours/' %}active{% endif %}"><a href="{% url 'tours' %}" class="nav-link">Tours</a></li>
                     <li class="nav-item {% if request.path == '/hoteles/' %}active{% endif %}"><a href="{% url 'hoteles' %}" class="nav-link">Hoteles</a></li>
-                    <li class="nav-item {% if request.path == '/servicios/' %}active{% endif %}"><a href="{% url 'excursiones' %}" class="nav-link">Excursiones</a></li>
+                    <li class="nav-item {% if request.path == '/excursiones/' %}active{% endif %}"><a href="{% url 'excursiones' %}" class="nav-link">Excursiones</a></li>
                     <!-- <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li> -->
                     <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
                     <li class="nav-item {% if request.path == '/about/' %}active{% endif %}"><a href="{% url 'about' %}" class="nav-link">Nosotros</a></li>
@@ -136,7 +136,7 @@
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <i
                             class="icon-heart" aria-hidden="true"></i> by <a href="http://skytripsandtravel.com/"
-                            target="_blank">SkyTrips&Travel |</a> <a href="{% static 'core/images/terminosycondiciones.pdf' %}" class="button" download>Terminos y condiciones</a>
+                            target="_blank">SkyTrips&Travel |</a> <a href="/terminos">Terminos y condiciones</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                 </div>

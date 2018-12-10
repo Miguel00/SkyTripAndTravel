@@ -1,13 +1,13 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class tour(models.Model):
     nombre_tour = models.CharField(max_length=50)
     pickup = models.CharField(max_length=50)
     duracion = models.CharField(max_length=50)
-    costo = models.DecimalField(decimal_places=3, max_digits=6)
-    descripción = models.TextField()
-    comentario = models.TextField()
+    costo = models.CharField(max_length=50)
+    descripción = RichTextField()
+    comentario = RichTextField()
     imagen = models.ImageField(verbose_name="Imagen", upload_to="tours")
     recomendado = models.BooleanField(default=False)
     creacion = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")

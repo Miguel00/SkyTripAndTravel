@@ -2,7 +2,7 @@
 {% block  title %}Destinos{% endblock %}
 {% load static %}
 {% block slides %}
-<div class="slider-item" style="background-image: url('{% static 'core/images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
+{% comment %} <div class="slider-item" style="background-image: url('{% static 'core/images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row slider-text align-items-center">
@@ -12,124 +12,106 @@
         </div>
       </div>
     </div>
-</div>
+</div> {% endcomment %}
 {% endblock %}
 {% block  content %}
 <section class="ftco-section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 text-center">
               <div class="row">
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-1.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-2.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-3.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-4.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-5.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-6.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-7.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-8.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-lg-4 mb-4 ftco-animate">
-                  <a href="#" class="block-5" style="background-image: url('{% static 'core/images/hotel-1.jpg'%}');">
-                    <div class="text">
-                      <span class="price">$29/night</span>
-                      <h3 class="heading">Luxe Hotel</h3>
-                      <div class="post-meta">
-                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                      </div>
-                      <p class="star-rate"><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star-half-full"></span> <span>500 reviews</span></p>
-                    </div>
-                  </a>
+                <div class="col-md-12 col-lg-12 mb-12 ftco-animate text-justify">
+                  <p><span style="font-weight:bold;">TÉRMINOS Y CONDICIONES</span><br><br>
+
+La promoción le incluye:<br><br>
+
+HOTELES: Alojamiento en habitaciones con baño privado en los hoteles mencionados en los diferentes programas. En el caso improbable de no respetársenos los cupos por causa de fuerza mayor, como coincidencia de eventos políticos, congresos, ferias, etc., se proporcionará
+alojamiento en hoteles de similar o superior categoría.<br><br>
+
+Cada plan de vacaciones es especificado por el tipo y definición de cada paquete (ejemplos de tipos de paquetes; Plan Europeo, Plan Todo Incluido, Plan Desayunos Incluidos, Plan Americano, Plan Desayuno Continental, Plan transporte terrestre incluido, otros) Todos y cada uno de nuestros planes están sujetos a disponibilidad según temporada y fechas dependiendo de inventarios de hoteles, aerolíneas, tour operadoras, transportes terrestres y cualquier situación que impida brindar el servicio en la fecha que el cliente lo solicite dejando fuera de toda responsabilidad a Sky Trips & Travel y cualquiera de sus asociados por cualquier motivo ajeno nuestras empresas ya que solo ofrecemos servicios de promociones y con subsidios por los clubes vacacionales y empresas turísticas.<br><br>
+
+HABITACIONES: Cuentan con una o dos camas. Las habitaciones triples o cuádruples cuentan con dos camas matrimoniales. Los hoteles no proporcionan camas extras.<br><br>
+
+RÉGIMEN DE ALIMENTOS: Según indicado en cada uno de los programas.<br><br>
+
+VISITAS Y EXCURSIONES: Según lo indicado en cada uno de los programas.<br><br>
+
+TRASLADOS: Desde aeropuertos, puertos, terminales hasta hoteles siempre<br><br>
+que estén específicamente mencionados en los diferentes programas.<br><br><br>
+
+<span style="font-weight:bold;">Las promociones NO incluyen:</span><br><br>
+
+Ningún servicio que no aparezca claramente especificado en los programas de este catálogo web o en los párrafos anteriores, tales como extras en los hoteles, propinas, alimentos, bebidas, planchado de ropa, llamadas telefónicas, impuestos de aeropuertos, impuestos y extras de ningún tipo en boletos aéreos, seguros, ni gastos por excesos de equipaje, y todo gasto de índole personal.  Tampoco se incluyen, por ser responsabilidad del pasajero, los gastos de pasaporte, visas de entrada para los países que lo requieran, vacunas y otros documentos necesarios para el viaje; la agencia organizadora declina toda responsabilidad por problemas y / o gastos que puedan surgir
+derivados de que algún pasajero lleve su documentación incompleta.<br><br>
+
+Políticas de Cobro<br><br>
+
+El monto correspondiente a su reservación Sky Tips & Travel lo cargará inmediatamente a los datos de la tarjeta de crédito / debito que Usted proporcione para tal efecto, siempre y cuando el estatus de su reservación muestre que está confirmada, y aparecerá en su estado de cuenta con la leyenda: Tevi Pago, Easy Pay ó con la leyenda equivalente al Proveedor, excepto en algunas reservaciones que incluyen boletos de avión donde podrán aparecer dos cargos (a) El primero por el costo de los boletos de avión y (b) el segundo por los demás servicios reservados, tales como: Hotel, traslados, impuestos, cuotas y otros.<br><br>
+
+Estos cargos se reflejarán con la leyenda Tevi Pago, Easy Pay o con la leyenda equivalente al Proveedor y el nombre correspondiente a la “AEROLINEA”. Para el pago de su reservación, aceptamos Tarjetas de Crédito / Debito Visa, MasterCard y American Express. Si Usted no cuenta con alguna de estas tarjetas de crédito / debito, puede enviarnos una transferencia bancaria, Depósito Bancario para mayor información favor de contactar uno de nuestros Asesores de Viajes. Las tarifas publicadas en nuestro sitio están cotizadas en varios tipos de monedas, las cuales son debidamente especificadas en su momento. Pesos Mexicanos (MX) serán cobrados en Pesos Mexicanos (MX). En el caso de cualquier otro tipo de moneda, el monto de la transacción será convertido a Dólares Americanos (USD) al tipo de cambio vigente a la fecha de la transacción. Favor de tomar en cuenta que el monto que aparecerá en su recibo de pago de su tarjeta de crédito / débito, puede variar hasta un cinco por ciento con motivo de la fluctuación internacional del tipo de cambios de divisas. Sky Trips & Travel no es responsable de dicha fluctuación. Usted reconoce haber sido informado de la fluctuación del tipo de cambio y estar de acuerdo con el cargo correspondiente en Dólares Americanos. En caso de requerir factura fiscal, favor ingresar a la liga para facturación electrónica que se envía en su confirmación de itinerario. Cabe mencionar que por razones fiscales las facturas serán elaboradas después de generar el pago o después de haber disfrutado el (los) servicio(s) reservado(s).<br><br>
+
+<span style="font-weight:bold;">POLÍTICAS DE RESERVACIÓN:</span><br><br>
+
+Las tarifas mostradas en el sitio Web, son solamente válidas el día de su cotización. Las tarifas aplicarán para su respectivo cargo, solo en caso de reservar el servicio deseado, pues de lo contrario dichas tarifas pueden variar. Una reservación se considera completada, cuando Usted cuenta con un número de confirmación y el cargo correspondiente ha sido aplicado desde $100.00 USD. POR CONCEPTO DE CUOTA DE RESERVACIÓN (La cuota puede variar de acuerdo a la temporada), (OTRAS CUOTAS APLICAN EN TEMPORADAS ALTAS). Al momento de reservar, usted nos autoriza de manera escrita y/o verbal a usar su número de tarjeta de crédito / debito para realizar su pago, y confirma expresamente conocer y aceptar nuestras políticas de reservación, de pago, de deslinde de responsabilidad y cancelación. Todas las reservaciones están sujetas a disponibilidad al momento de procesar su solicitud. La disponibilidad no puede ser garantizada hasta haber recibido el pago total. Para algunas reservaciones (debidamente identificadas antes de llenar sus detalles de
+contacto y de la tarjeta de crédito / debito), tenemos que verificar disponibilidad directamente con el departamento de reservaciones del proveedor antes de poder confirmarla. Le pedimos un máximo de 48 horas para dicha verificación de disponibilidad y confirmación. Con el fin de evitar contratiempos, Usted debe imprimir su cupón correspondiente y presentarlo al momento de requerir su servicio pagado. Si Usted desea cambiar o cancelar su reservación, por favor póngase en contacto a la brevedad posible, con su Asesor de Viajes asignado, mencionando su número de reservación. Temporadas Pico sujetas a disponibilidad y cambios de tarifas sin previo aviso (Navidad, Año Nuevo, Semana Santa, Pascua, Julio y Agosto) Le sugerimos leer cuidadosamente nuestras POLÍTICAS DE CANCELACIÓN. Cualquier cambio de reservación está sujeto a disponibilidad y re-cotización de tarifas. Para mayor información, favor de contactar a su Asesor de Viajes asignado,
+mencionando su número de reservación.<br><br> 
+
+POLÍTICAS DE PAGO: <br><br>
+
+El monto correspondiente a su reservación, será cargado inmediatamente a su tarjeta de crédito / debito, siempre y cuando el estatus de su reservación muestre que está confirmada, y aparecerá en su estado de cuenta con la leyenda: " Tevi Pago, Easy Pay ó con la leyenda equivalente al Proveedor " excepto en algunas reservaciones que incluyen traslados donde podrán aparecer dos cargos. El primero por el costo del traslado y el segundo por los demás servicios reservados, tales como: Hotel, impuestos, cuotas y otros. Para el pago de su reservación, aceptamos Tarjetas de Crédito / debito Visa, Master Card y American Express. Si Usted no cuenta con alguna de estas tarjetas de crédito, puede enviarnos una transferencia bancaria. Para mayor información favor de contactar uno de nuestros Asesores de Viajes. Las tarifas publicadas en nuestro sitio están cotizadas en varios tipos de monedas, las cuales son debidamente especificadas en su momento. Pesos Mexicanos serán cobrados en Pesos Mexicanos. En el caso de cualquier otro tipo de moneda, el monto de la transacción será convertido a Dólares Americanos al tipo de cambio vigente a la fecha de la transacción. Favor de tomar en cuenta que el monto que aparecerá en su recibo de pago de su tarjeta de crédito, puede variar hasta un cinco por ciento con motivo de la fluctuación internacional del tipo de cambios de divisas. Sky Trips & Travel, no es responsable de dicha fluctuación y al aceptar estas políticas, Usted reconoce haber sido informado de la fluctuación del tipo de cambio y estar de acuerdo con el cargo correspondiente en Dólares Americanos.
+<span style="font-weight:bold;">POLÍTICAS DE RESERVACIÓN PARA CERTIFICADOS VACACIONALES:</span><br><br>
+
+Para Calificar en esta promoción especial los participantes deben ser:<br><br>
+
+• Parejas Casadas con edades entre 30 y 65 años al momento de atender la Presentación de Ventas. Todos los participantes deben presentar como Identificaciones Oficiales únicamente INE o Pasaporte en original con misma dirección, no se aceptan copias de INE (s) o pasaportes. En caso de que las identificaciones mencionadas anteriormente no cuenten con la misma dirección, las actas de matrimonios o el acta de nacimiento de los hijos que tengan en común (comprobable con identificación) servirán también como prueba de matrimonio. Sus ingresos mancomunados mensuales deben de entre como mínimo $35,000.00 y 90,000.00 pesos Mexicanos comprobables.<br>
+• Parejas no casadas o del mismo sexo viviendo juntos deberán tener entre 35 y 65 años de edad al momento de atender la Presentación de Ventas. Deben presentar como Identificaciones Oficiales únicamente INE o Pasaporte en original con misma dirección, no se aceptan copias de INE (s) o pasaportes. En caso de que las identificaciones mencionadas anteriormente no cuenten con la misma dirección, el acta de nacimiento de los hijos que tengan en común (comprobable con identificación) servirán también como prueba de concubinato. Sus ingresos mancomunados mensuales deben de ser como mínimo entre $35,000.00 y 90,000.00 pesos Mexicanos comprobables.<br>
+• Deben contar con trabajo estable legalmente registrado (Ser una persona laboralmente activa).<br>
+• Al momento de asistir a la presentación de ventas del Club Vacacional, deberán mostrar 2 (DOS) tarjetas de Crédito Internacionales con su nombre grabado y vigentes tales como Visa, Master Card o American Express (Tarjetas Corporativas, de crédito que sean Departamentales, Débito o Adicionales NO son aceptadas para esta promoción).<br>
+• Esta promoción es válida para residentes y/o nacidos en México (excepto Yucatán, Campeche y Quintana Roo), Estados Unidos y Canadá (Excepto Quebec). Este paquete podrá ser utilizado en cualquier temporada del año, sujeto a disponibilidad las fechas de Navidad y Año Nuevo (21 de Diciembre 20XX al 10 de Enero 20XX) tampoco la Semana Santa y semana de pascua.<br>
+• Todos los participantes, cónyuges o concubinos deberán atender juntos la Presentación de Ventas del Club Vacacional del hotel con duración de 90 a 120 minutos.<br>
+• Los participantes que no cumplan con las Calificaciones especificadas en los puntos anteriores y/o de no presentar los documentos arriba mencionados en CHECK IN perderán su Estatus de Prospecto Calificado para este paquete promocional resultando en el cargo de la Tarifa Rack vigente en el Hotel por la cantidad de noches de la estancia. <br><br>
+
+Los descritos a continuación serán considerados como prospectos NO Calificados:<br><br>
+• Trabajadores de Aerolíneas, Agencias de viaje, de la industria Hotelera o Tiempo Compartido, Ministros Religiosos y personas Retiradas o Jubiladas. Mujeres y hombres solteros No califican.<br>
+• Cualquiera que haya atendido en el pasado a la presentación de ventas del club vacacional del hotel, incluyendo miembros del club vacacional.<br>
+• Participantes que hayan usado o que usarán un producto similar antes o después de su estancia en el Hotel.<br>
+• Cualquier persona cuyo nombre no aparezca en la reservación original.<br>
+• Si Amigos o Familiares están viajando juntos con diferente número de confirmación, solo uno aplicará para esta promoción y la segunda reserva deberá pagar Tarifa Rack.<br>
+• Al momento de su llegada al hotel, usted será contactado por nuestros representantes del hotel anfitrión, en caso de no ser contactado es responsabilidad del cliente contactar al Concierge para
+concretar la cita de la Presentación.<br>
+• La Presentación de Ventas no puede ser en el mismo día de su llegada ni el último.<br>
+• Es obligatorio no tener reservado alguna actividad en el día de la Presentación.<br><br>
+
+<span style="font-weight:bold;">EN CASO DE NO CUMPLIR CON TODOS LOS REQUISITOS DE CALIFICACIÓN AQUÍ DESCRITOS TODOS NUESTROS CLIENTES PODRÁN RECIBIR UN PLAN DE VACACIONES UN PLAN SOLO HOSPEDAJE POR CUATRO DÍAS Y TRES NOCHES PARA DOS ADULTOS Y 2 MEORES DE 12 AÑOS, CUBRIENDO SU RESPECTIVA CUOTA DE RESERVACION SEGÙN TEMPORADA.
+**QUEDAN EXCENTOS DE CUALQUIER RESTRICCIÓN DE USO AQUÍ DESCRITA TODAS LAS SEMANAS VACACIONALES OTORGADAS POR "PERFECT WEEKS, RCI, ENTRE OTROS”, SOLO SE LIMITAN A EL USO DE TODOS LOS SERVICIOS PROPORCIONADOS POR DICHAS EMPRESAS.</span><br><br>
+
+DESLINDE DE RESPONSABILIDADES:<br><br>
+
+La página Internet presta servicios en calidad de agente intermediario entre el cliente y el prestador de los bienes y servicios promocionados en el sitio Web. La página Internet establece negociaciones comerciales dentro de sus propios estándares de calidad y servicio, tales como, pero no limitados a: hospedaje en hoteles, transportación terrestre y otras actividades turísticas afines como tours y excursiones, eligiendo solo a los proveedores más calificados y de mayor prestigio del mercado. No obstante, esto, la página Internet no puede asumir ninguna responsabilidad frente a quienes compran servicios en su portal de Internet, por actos u omisiones de los proveedores aquí anunciados, en virtud de que no tiene control alguno o relación legal sobre su personal, equipo, operación o bienes. La página Internet declara, que: <br><br>
+(a) las fotografías mostradas en su portal de Internet son solamente representativas y no garantizan que, a su llegada, todo sea exactamente igual como aquí se describe. <br>
+(b) La categoría de estrellas asignada a los hoteles y servicios, están basadas en la interpretación de la página Internet y pueden diferir de las categorías reportadas en otros lugares. <br>
+(c) Las descripciones de los servicios de viaje son actualizadas por la página Internet a su mejor conocimiento, pero no garantizan que todo será exactamente igual a su llegada.<br>
+(d) La página Internet se reserva el derecho de rechazar a cualquier cliente en cualquier momento. (e) Cualquier reclamación o notificación por escrito en contra de la página Internet, deberá ser recibida a más tardar con catorce (14) días después del regreso de su viaje. La página Internet, no asumirá responsabilidad por ninguna reclamación, costo o gastos que surjan por heridas personales o de terceras personas, accidentes o deceso, pérdida o daños de pertenencias personales,
+pérdida de diversión, enojo, desilusión, angustia o frustración, ya sea mental o física, que resulte de lo que se menciona a continuación: (a) Actos u omisiones de cualquiera otra persona que no sea la página Internet o sus empleados; (b) Enfermedad, robo, disputas laborales, fallas mecánicas, cuarentena, acciones gubernamentales, clima, o cualquier otra causa ajena al control directo de la página Internet; (c) Falla del cliente en obtener la documentación requerida para su viaje tal como, pero no limitada a, pasaportes, visas y certificados, en cuyo caso usted no tendrá derecho a ningún reembolso; (d) Falla del cliente en seguir instrucciones incluyendo, pero no limitado a, horarios
+de salida de aeropuerto, hora y fecha de entrada y salida en hoteles, políticas de canje de cupones; (e) Cancelación o cambio por cualquier razón de los servicios de viaje ofrecidos. Nos reservamos el derecho de cancelar o cambiar los servicios de viaje a nuestra discreción, pero se tratará de sustituirlos con servicios comparables. Si nosotros tenemos que cancelar completamente su reservación, la responsabilidad de la página Internet estará limitada al reembolso de todo el dinero pagado a la página Internet; (f) Un reembolso total no será honrado en situaciones en las que el viaje tenga que ser cancelado, interrumpido y/o pospuesto por la página Internet por razones que estén fuera de su control (causas de fuerza mayor, tales como, pero no limitadas a, clima, huracán, terremotos, actos de terrorismo, etc.) y en los que las obligaciones contractuales de la página Internet con sus proveedores no le permitan obtener reembolso de la suma pagada o a ser pagada al proveedor por cuenta del cliente. En cualquier caso, a discreción de la página Internet, se podrá retener un 20% del total de la cantidad pagada por la reservación como gasto administrativo. A pesar de la estrecha comunicación establecida por la página Internet con los proveedores aquí anunciados, existe la posibilidad de que la vigencia de algunos precios haya expirado o provenga de información
+erróneamente proporcionada por dichos proveedores con la que nuestra base de datos es alimentada. No obstante, esto, la página Internet, toma la precaución de verificar las tarifas que aplican con cada reservación. En caso de que el precio correcto sea menor a la cantidad cotizada, la página Internet aplicará el monto menor. En caso de que el precio correcto sea mayor a la cantidad cotizada, su Asesor de Viajes asignado se pondrá oportunamente en contacto con Usted, informándole la cantidad correcta o bien, registrando la cancelación de la reservación a petición suya por no estar de acuerdo con el incremento en precio, deslindando expresamente a la página Internet y sus proveedores de cualquier responsabilidad o pago de indemnización por inconvenientes causados por dicha cancelación.<br><br>
+
+<span style="font-weight:bold;">Política de Cancelación</span><br><br>
+
+Toda solicitud de cancelación cuenta con cinco días naturales para ser reembolsado con el cien por ciento del total del costo de la reservación y debe ser informada por Usted por escrito vía e-mail a su Asesor de Viajes asignado, mencionando su número de reservación. Para Cancelación de Reservaciones de Hoteles. A continuación, Sky Trips & Travel le describe sus políticas generales de cancelación aplicables para la mayoría de los hoteles pagados en Tarifa Rack: • Las reservaciones canceladas 15 días o más antes de la fecha de llegada están sujetas a un cargo del 50% más el 13.5% ó 15% del uso terminal bancaria esto es del total de la cantidad de su reservación. • Las reservaciones canceladas de 14 a 3 días antes de la fecha de llegada están sujetas a un cargo de 2 noches. • Las habitaciones no reembolsables no aplica reembolso. • Las reservaciones canceladas de 2 a 0 días antes de la fecha de llegada, o en caso de no llegar, no serán reembolsadas. De igual manera no aplican reembolsos para salidas anticipadas. • Para las temporadas de Navidad, Año Nuevo y Semana Santa, las políticas de cancelación son diferentes, si desea información al respecto, por favor contacte a uno de nuestros Asesor de Viajes. - En los casos en los que proceda el reembolso en términos de las presentes políticas de cancelación, la cantidad a reembolsar se verá reflejada en su estado de cuenta dentro de los próximos 30 a 45 días hábiles dependiendo del Proceso Bancario, principalmente de los plazos de su Banco emisor. Para Cancelación de Reservaciones de Tours y/o Transportación Terrestre: Al momento reservar, las políticas de cancelación aplicables para el tour o la transportación terrestre específica, se desplegarán automáticamente en pantalla para su conocimiento. A continuación, Sky Trips & Travel describe sus políticas generales de cancelación, aplicables para la mayoría de los tours y servicios de transportación terrestre: • Las reservaciones canceladas 3 días o más antes de la fecha del servicio, están sujetas a un cargo del 20% del total de la cantidad de su reservación. • Las reservaciones canceladas de 2 a 0 días antes de la fecha del servicio, o en caso de no llegar, no serán reembolsadas. • Habitaciones, tours y tarifas no reembolsables podrán tomarse a cuenta para otro servicio e incluso es transferible, para más información consulte a su Asesor de viaje. • En caso de incumplimiento por alguna de Las partes a las obligaciones, la Parte que incumpla se hará acreedora a la pena convencional equivalente al 20 % (veinte por ciento) del precio total del Servicio de hospedaje sin incluir el Impuesto al Valor Agregado (IVA). Sky Trips & Travel se reserva el derecho de contratar por cuenta de Usted, los servicios a que se refiere este especifican en los presentes Términos y Condiciones precisamente en la calidad y/o categorías contratadas, en cuanto a transportistas, hoteles y arrendadoras de autos se refiere, independientemente del prestador último de los servicios, salvo que expresamente se convenga que estos serán prestados invariablemente por un proveedor determinado. En caso de modificación del prestador directo del servicio, este será proporcionado por otro de calidad equivalente, si Usted hace uso del servicio, se entenderá que consintió dicha modificación y no procederá reclamación, compensación o reembolso alguno. Una vez que Sky Trips & Travel recibe por parte de Usted el importe de los servicios contratados, sean estos aéreos, terrestres, de hospedaje, en conjunto (paquete) o cualquier otro. HOTELES: Cancelación dentro de las 48 horas antes de su llegada se dará por perdida su reservación al 100% de gastos ya generados y se tendrá oportunidad de volver a reservar únicamente pagando la CUOTA DE RESERVACIÓN O ACTIVACIÓN. Temporadas Pico sujetas a disponibilidad y cambios de tarifas sin previo aviso (Navidad, Año Nuevo, Semana Santa, Pascua, Julio y Agosto) dentro de las 72 horas antes de su llegada se cobrara 2 noches de cargo a la tarifa correspondiente más 50% de gastos administrativos o lo que resulte dentro de las políticas propias de cada hotel (centro de hospedaje) ya que cada hotel tiene sus propias políticas y en algunos casos expresamente para la Temporada Pico no procede reembolso alguno. Cuando el cliente no ocupe (use) el espacio o servicio contratado por la razón que esta sea queda sujeto a las políticas de cargos por "NO SHOW" aplicables de acuerdo a políticas de cada hotel (centro de hospedaje) más el 85% de gastos administrativos y si tuviera saldo a favor la Agencia Organizadora esta obliga a tramitar ese saldo a favor que resulte. DURANTE LA ESTANCIA: Cuando el pasajero decida por la razón que esta sea desistir de su hospedaje durante el periodo del mismo (ya estando en el hotel) queda entendido que es bajo su propia responsabilidad y que la Agencia organizadora queda libre de cualquier responsabilidad.<br><br>
+<span style="font-weight:bold;">**LAS POLÍTICAS DE CANCELACIONES SOLO APLICAN PARA RESERVACIONES PAGADAS EN TARIFA REGULAR, EN PROMOCIONES O DESCUENTOS ESPECIALES NO HAY CANCELACIONES NI REEMBOLSOS.</span><br><br>
+
+Política de responsabilidad<br>
+Información general<br>
+Sky Trips & Travel es un prestador de servicios turísticos de agencia de viajes (operadora) Y está debidamente dado de alta ante la Secretaria de Hacienda y Crédito Público (SAT). Sky Trips & Travel, al prestar sus servicios, observa y se obliga estrictamente a las disposiciones de la Ley General de Turismo, la Ley Federal de Protección al Consumidor y demás legislación aplicable. Sky Trips & Travel presta servicios en calidad de intermediario entre el cliente y el prestador de los bienes y servicios ofertados a nuestros clientes. Sky Trips & Travel establece negociaciones comerciales dentro de sus propios estándares de calidad y servicio, tales como, pero no limitados a, hospedaje, transportación terrestre, eligiendo sólo a los proveedores más calificados y de mayor prestigio del mercado. Por este medio el cliente autoriza a Sky Trips & Travel, a actuar como mediador en la contratación de los distintos servicios elegidos, para conformar su paquete turístico lo describa. El servicio de mediación mercantil es realizado directamente por Sky Trips & Travel, desde su centro de operaciones situado en la Ciudad de Cancún, Quintana Roo, utilizando su plataforma tecnológica,
+independientemente de la forma en la que se realice la compra, ya sea a través de Internet, puntos de atención a clientes, atención telefónica o cualquier otra forma de contacto. En caso de contratación de Paquetes de Viaje en el extranjero, el cliente acepta que el aprovechamiento de los mismos será realizado fuera de territorio nacional, motivo por el cual Sky Trips & Travel traslada el Impuesto al Valor Agregado a la tasa del 0%, de conformidad con lo dispuesto por el artículo 29, fracción IV, de la LIVA. La adquisición de "Paquetes de Viaje" con destino en el extranjero, que incluyan el servicio de transportación aérea iniciado en territorio nacional, Sky Trips & Travel, traslada el Impuesto al Valor Agregado a la tasa del 16%, únicamente sobre la parte que represente el 25% de dicho medio de transporte. Sky Trips & Travel declara que: 1. Las fotografías mostradas en su portal de Internet son con fines representativos y no garantizan que, a tu llegada, todo sea exactamente igual como aquí se describe; 2. La categoría de estrellas asignada a los hoteles, está basada en la interpretación de Sky Trips & Travel y puede diferir de las categorías reportadas en otros lugares. 3. Las descripciones de los servicios de viaje son actualizadas por Sky Trips & Travel de manera constante pero no garantizan que todo será exactamente igual a tu llegada. 4. Sky Trips & Travel se reserva el derecho de rechazar a cualquier persona o cliente en el momento que considere necesario. 5. Cualquier reclamación o notificación por escrito en contra de Sky Trips & Travel, deberá ser recibida a más tardar con treinta (30) días después de concluido el viaje. Contacto:
+6. Deslinde de responsabilidad Sky Trips & Travel no asumirá responsabilidad por ninguna reclamación, costo o gasto producido por heridas personales o de terceras personas, accidentes o deceso, pérdida o daños de objetos personales, falta de diversión, enojo, desilusión, angustia o frustración (ya sea mental o física) que resulte de las siguientes causas: 1. Actos u omisiones de cualquiera otra persona que no sea Sky Trips & Travel o sus empleados o la descripción de contenido de su certificado vacacional (carta de autorización); 2. Enfermedad, robo, disputas laborales, huelgas, fallas mecánicas, cuarentena, acciones gubernamentales, condiciones climáticas, o cualquier otra causa ajena al control directo de Sky Trips & Travel; 3. Imposibilidad del cliente para viajar por no contar con los documentos requeridos tales como, pero no limitados a pasaportes con al menos 6 meses de vigencia después de la fecha de inicio del viaje, visas, identificación personal, recetas o documentos médicos y certificados. Sky Trips & Travel no es responsable frente al cliente o cualquier tercero debido a la imposibilidad o falta de documentos del cliente. 4. Incumplimiento del cliente en seguir instrucciones incluyendo, pero no limitadas a horarios de salida de vuelos, hora y fecha de entrada y salida en hoteles, y políticas de canje de cupones; 5. Cancelación o cambio por cualquier razón de los servicios de viaje ofrecidos. Sky Trips & Travel se reserva el derecho de cancelar o cambiar los servicios publicados, pero se tratará de sustituirlos con servicios similares. Si una reservación debe ser cancelada, la responsabilidad de Sky Trips & Travel estará limitada al reembolso de solo la parte proporcional de todo el dinero pagado por el cliente mas no de la parte de los dineros pagados a su vez para fines de reservación directa con el o los clubes vacacionales; 6. No aplican reembolsos totales en situaciones en las que el viaje tenga que ser cancelado, interrumpido o pospuesto por Sky Trips & Travel por razones que estén fuera de su control (causas de fuerza mayor, tales como, pero no limitadas a, condiciones climáticas, huracanes, terremotos, huelgas, guerras, actos de terrorismo, etc.) y en los que las obligaciones contractuales de Sky Trips & Travel con sus proveedores no le permitan obtener reembolso de la suma pagada o a ser pagada al proveedor por cuenta del cliente. En estos casos, Sky Trips & Travel se reserva el derecho de retener un 30% del total de la cantidad pagada por la reservación como gasto administrativo. 7. A pesar de que actualizamos las tarifas de manera constante, en casos remotos existe la posibilidad de que haya cambios en las tarifas sin previo aviso por contingencias o causas de fuerza mayor. En estos casos, es posible que el proveedor no tenga forma de actualizar rápidamente las tarifas. Sky Trips & Travel hace revisiones periódicas donde es posible que haya diferencias entre el precio pagado por la reservación y el precio requerido para usar el servicio. En caso de haber cambios en las tarifas, si ésta resulta en un precio menor, se cobrará ese precio y se reembolsará la diferencia. Si resulta en un precio mayor, uno de nuestros Asesores de Viaje se pondrá en contacto contigo y te informará sobre el cambio. Si no estás de acuerdo, Sky Trips & Travel te reembolsará el monto pagado en la cantidad que esta le corresponda, pero no se hace responsable por reclamaciones o inconvenientes derivados del cambio de tarifas o la cancelación de la reservación. 8. Si aún no tiene fecha de viaje solicitada y confirmada, para solicitar cualquier reservación deberá mandar un correo electrónico como mínimo 30 días (temporada baja) y 45 días (temporada alta) de anticipación de su fecha de viaje deseada al correo: y solo hasta que haya recibido su número de confirmación del hotel acordado podrá usted viajar. Todas las políticas mencionadas quedan sujetas a cambios sin previo aviso y se aplicarán también los términos y condiciones de los hoteles y clubes vacacionales en el que el cliente se hospede. 9. Entiendo que al aceptar y firmar los documentos requeridos enviados vía correo electrónico por parte de Sky Trips & Travel doy por aceptados todos y cada uno de los términos y condiciones aquí declarados.<br><br>
+
+Última actualización 01 de enero de 2018 <br>
+TODOS LOS DERECHOS RESERVADOS Sky Trips & Travel</p><br>
                 </div>
               </div>
-              <div class="row mt-5">
+              {% comment %} <div class="row mt-5">
                 <div class="col text-center">
                   <div class="block-27">
                     <ul>
@@ -143,7 +125,7 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> {% endcomment %}
             </div>
             <!-- END -->
   

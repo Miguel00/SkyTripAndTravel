@@ -48,20 +48,35 @@
             </div> -->
             <div class="col-md-12">
               <h2 class="h4 mb-4">Contacto</h2>
-              <form action="#">
+              {% comment %} <form action="" method="POST">
+                {% csrf_token %}
+                <table>
+                  {{form.as_table}}
+                </table>
+                <input type="submit" value="Enviar" class="btn btn-primary py-3 px-5">
+              </form> {% endcomment %}
+              <form action="" method="POST">
+                {% csrf_token %}
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Nombre">
+                  {% comment %} <input type="text" class="form-control" placeholder="Nombre"> {% endcomment %}
+                  {{form.name}}
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Correo">
+                  {% comment %} <input type="text" class="form-control" placeholder="Correo"> {% endcomment %}
+                  {{form.email}}
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Asunto">
+                  {% comment %} <input type="text" class="form-control" placeholder="Asunto"> {% endcomment %}
+                  {{form.asunto}}
                 </div>
                 <div class="form-group">
-                  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensaje"></textarea>
+                  {{form.content}}
+                  {% comment %} <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensaje"></textarea> {% endcomment %}
                 </div>
                 <div class="form-group">
+                  {% if 'ok' in request.GET %}
+                    <p>Se envio el correo correctamente</p>
+                  {% endif %}
                   <input type="submit" value="Enviar" class="btn btn-primary py-3 px-5">
                 </div>
               </form>
