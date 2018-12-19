@@ -40,10 +40,10 @@
                 <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
                   <a href="/tours/{{tour.id}}" class="block-5" style="background-image: url('{{tour.imagen.url }}');">
                     <div class="text">
-                      <span class="price" style="font-weight:bold;">Precio: {{tour.costo}}</span>
+                      <span class="price" style="font-weight:bold;">{{tour.costo}}</span>
                       <h3 class="heading">{{tour.nombre_tour}}</h3>
                       <div class="post-meta">
-                        <span>{{tour.descripción|safe}}</span>
+                        <span>{{tour.descripción|slice:":200"|safe}}</span>
                       </div>
                       {% comment %} <a href="/tours/{{tour.id}}" class="read">Read more</a> {% endcomment %}
                       <span class="bt-copmprar price" style="color:white!important;font-size:19px;">Detalles</span>

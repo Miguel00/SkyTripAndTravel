@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-    
     <title>{% block title %} {% endblock %} | SkyTrips&Travel</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -49,8 +48,6 @@
                     <li class="nav-item {% if request.path == '/tours/' %}active{% endif %}"><a href="{% url 'tours' %}" class="nav-link">Tours</a></li>
                     <li class="nav-item {% if request.path == '/hoteles/' %}active{% endif %}"><a href="{% url 'hoteles' %}" class="nav-link">Hoteles</a></li>
                     <li class="nav-item {% if request.path == '/excursiones/' %}active{% endif %}"><a href="{% url 'excursiones' %}" class="nav-link">Excursiones</a></li>
-                    <!-- <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li> -->
-                    <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
                     <li class="nav-item {% if request.path == '/about/' %}active{% endif %}"><a href="{% url 'about' %}" class="nav-link">Nosotros</a></li>
                     <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}"><a href="{% url 'contact' %}" class="nav-link">Contacto</a></li>
                     <li class="nav-item"><a href="http://bit.ly/2OmOBYh" target="_blank" class="nav-link">

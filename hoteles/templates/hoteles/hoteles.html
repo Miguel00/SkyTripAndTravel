@@ -28,7 +28,7 @@
                   <div class="col-md-6 col-lg-6 mb-6 ftco-animate">
                     <a href="/hoteles/{{hotel.id}}" class="block-5" style="background-image: url('{{hotel.imagen.url}}');">
                       <div class="text">
-                        <span class="price" style="font-weight:bold;">Precio: {{hotel.costo}}</span>
+                        <span class="price" style="font-weight:bold;">{{hotel.costo}}</span>
                         <h3 class="heading">{{hotel.nombre_hotel}}</h3>
                         <div class="post-meta">
                           <span>{{hotel.descripción|slice:":200"|safe}}</span>
